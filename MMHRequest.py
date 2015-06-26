@@ -1,4 +1,7 @@
 import unirest
+gamename=raw_input("Type the game name: ")
+owner=raw_input("Type the owner: ")
+
 
 response = unirest.post(
 "http://makemehost.com/gamestart.php", 
@@ -6,7 +9,7 @@ response = unirest.post(
 headers={ 
 "Host": "makemehost.com",
 "Connection":"keep-alive",
-"Content-Length":"81",
+#"Content-Length":"81",
 "Cache-Control":"max-age=0",
 "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
 "Origin":"http://makemehost.com",
@@ -19,8 +22,8 @@ headers={
 params={ 
 "map": "Parasite%202%20[v1.14B].w3x", 
 "pp": "Public", 
-"gn":"PARASITE+2", 
-"owner":"Freyon",
+"gn":gamename, 
+"owner":owner,
 "location":"ALL"}
 
 )
